@@ -22,7 +22,7 @@
     <img src="/img/SS_logo.jpg" alt="Logo" width="80%" height="80%">
   </a>
 
-  <h3 align="center">Script Spinner Website</h3>
+  <h3 align="center">Script Spinner Software</h3>
 
   <p align="center">
     https://scriptspinner.com/
@@ -96,11 +96,11 @@ git --version
 
 1. Clone the repo
 ```sh
-git clone https://github.com/hirokiyaginuma/scriptspinner-website
+git clone https://github.com/hirokiyaginuma/scriptspinner-software
 ```
 2. Make sure you are in the project directory
 ```sh
-cd scriptspinner-website
+cd scriptspinner-software
 ```
 3. Make your virtual environment
 
