@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'splashscreen.ui'
+## Form generated from reading UI file 'splash_screen.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.1
 ##
@@ -39,15 +39,14 @@ class Ui_Splash_Screen(object):
         self.progressBar.setObjectName(u"progressBar")
         self.progressBar.setGeometry(QRect(70, 330, 591, 41))
         self.progressBar.setStyleSheet(u"QProgressBar {\n"
-"	background-color: rgb(98, 114, 164);\n"
-"	color:rgb(200, 200, 200);\n"
+"	background-color:rgb(149, 165, 166);\n"
 "	border-style: none;\n"
 "	border-radius: 10px;\n"
 "	text-align: center;\n"
 "}\n"
 "QProgressBar::chunk {\n"
 "	border-radius: 10px;\n"
-"	bavkground_color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(210, 157, 255, 255), stop:1 rgba(156, 69, 255, 255));\n"
+"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(210, 157, 255, 255), stop:1 rgba(156, 69, 255, 255));\n"
 "}")
         self.progressBar.setValue(24)
 

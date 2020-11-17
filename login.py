@@ -201,3 +201,11 @@ class Ui_Login(object):
         self.login_btn.setText(QCoreApplication.translate("Login", u"Log in", None))
     # retranslateUi
 
+if __name__ == "__main__":
+    import sys
+    app = QApplication(sys.argv)
+    MainScreen = QWidget()
+    ui = Ui_Login()
+    ui.setupUi(MainScreen)
+    MainScreen.show()
+    sys.exit(app.exec_())
