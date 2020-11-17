@@ -128,6 +128,7 @@ class Ui_Login(object):
         self.password_line = QLineEdit(self.frame_8)
         self.password_line.setObjectName(u"password_line")
         self.password_line.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.password_line.setEchoMode(QLineEdit.Password)
 
         self.horizontalLayout_4.addWidget(self.password_line)
 
@@ -201,11 +202,3 @@ class Ui_Login(object):
         self.login_btn.setText(QCoreApplication.translate("Login", u"Log in", None))
     # retranslateUi
 
-if __name__ == "__main__":
-    import sys
-    app = QApplication(sys.argv)
-    MainScreen = QWidget()
-    ui = Ui_Login()
-    ui.setupUi(MainScreen)
-    MainScreen.show()
-    sys.exit(app.exec_())

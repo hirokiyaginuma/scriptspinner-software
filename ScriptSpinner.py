@@ -7,19 +7,34 @@ from splash_screen import Ui_Splash_Screen
 from login import Ui_Login
 from test_screen import Ui_MainWindow
 
-counter = 0
+splash_counter = 0
 
 class MainWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self, email):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        self.ui.label_2.setText(str("Username: " + email))
 
 class Login(QWidget):
     def __init__(self):
         QWidget.__init__(self)
         self.ui = Ui_Login()
         self.ui.setupUi(self)
+
+        self.ui.login_btn.clicked.connect(self.login_click)
+
+    def login_click(self):
+        email = self.ui.email_line.text()
+        password = self.ui.password_line.text()
+        remember = self.ui.check_remember.isChecked()
+
+        print(email, password, remember) # print to console
+
+        self.main = MainWindow(email)
+        self.main.show()
+        self.close()
 
 class Splash_Screen(QMainWindow):
     def __init__(self):
@@ -37,17 +52,17 @@ class Splash_Screen(QMainWindow):
         self.show()
 
     def progress(self):
-        global counter
+        global splash_counter
 
-        self.ui.progressBar.setValue(counter)
+        self.ui.progressBar.setValue(splash_counter)
 
-        if counter > 100:
+        if splash_counter > 100:
             self.timer.stop()
             self.login = Login()
             self.login.show()
             self.close()
 
-        counter += 1
+        splash_counter += 1
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
