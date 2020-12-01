@@ -6,6 +6,7 @@ from PySide2.QtWidgets import *
 from splash_screen import Ui_Splash_Screen
 from login import Ui_Login
 from test_screen import Ui_MainWindow
+from main import Ui_Main
 
 splash_counter = 0
 
@@ -15,7 +16,22 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.ui.label_2.setText(str("Username: " + email))
+        if email != "":
+            self.ui.label_2.setText(str("Username: " + email))
+
+class Main(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.ui = Ui_Main()
+        self.ui.setupUi(self)
+
+        self.ui.actionKey_Time_Line.triggered.connect(self.toggle_left)
+
+    def toggle_left(self):
+        if self.ui.Left_widget.isVisible():
+            self.ui.Left_widget.hide()
+        else:
+            self.ui.Left_widget.show()
 
 class Login(QWidget):
     def __init__(self):
@@ -32,7 +48,7 @@ class Login(QWidget):
 
         print(email, password, remember) # print to console
 
-        self.main = MainWindow(email)
+        self.main = Main()
         self.main.show()
         self.close()
 
@@ -47,7 +63,7 @@ class Splash_Screen(QMainWindow):
 
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.progress)
-        self.timer.start(18)
+        self.timer.start(10)
 
         self.show()
 
