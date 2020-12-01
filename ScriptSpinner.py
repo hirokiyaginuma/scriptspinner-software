@@ -1,12 +1,12 @@
-import sys
+import sys, pickle
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-from splash_screen import Ui_Splash_Screen
-from login import Ui_Login
-from test_screen import Ui_MainWindow
-from main import Ui_Main
+from ui_splash_screen import Ui_Splash_Screen
+from ui_login import Ui_Login
+from ui_test_screen import Ui_MainWindow
+from main import Main
 
 splash_counter = 0
 
@@ -18,20 +18,6 @@ class MainWindow(QMainWindow):
 
         if email != "":
             self.ui.label_2.setText(str("Username: " + email))
-
-class Main(QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__(self)
-        self.ui = Ui_Main()
-        self.ui.setupUi(self)
-
-        self.ui.actionKey_Time_Line.triggered.connect(self.toggle_left)
-
-    def toggle_left(self):
-        if self.ui.Left_widget.isVisible():
-            self.ui.Left_widget.hide()
-        else:
-            self.ui.Left_widget.show()
 
 class Login(QWidget):
     def __init__(self):
@@ -82,5 +68,7 @@ class Splash_Screen(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    win = Splash_Screen()
+    # win = Splash_Screen()
+    win = Main()
+    win.show()
     sys.exit(app.exec_())

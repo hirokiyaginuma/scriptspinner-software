@@ -112,6 +112,9 @@ border: 1px solid;
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::DoubleClicked|QAbstractItemView::SelectedClicked</set>
+          </property>
           <property name="dragEnabled">
            <bool>false</bool>
           </property>
@@ -125,15 +128,24 @@ border: 1px solid;
            <property name="text">
             <string>TimeLine1</string>
            </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
           </item>
           <item>
            <property name="text">
             <string>TimeLine2</string>
            </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
           </item>
           <item>
            <property name="text">
             <string>TimeLine3</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
            </property>
           </item>
          </widget>
