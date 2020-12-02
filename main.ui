@@ -668,7 +668,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionYour_Account"/>
     <addaction name="separator"/>
-    <addaction name="actionEdit_your_information"/>
+    <addaction name="actionLogout"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -915,7 +915,7 @@ p, li { white-space: pre-wrap; }
     <string>Your Account</string>
    </property>
   </action>
-  <action name="actionEdit_your_information">
+  <action name="actionLogout">
    <property name="text">
     <string>Logout</string>
    </property>

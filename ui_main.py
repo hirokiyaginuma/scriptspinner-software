@@ -128,8 +128,8 @@ class Ui_Main(object):
         self.actionSide_Notes.setChecked(True)
         self.actionYour_Account = QAction(Main)
         self.actionYour_Account.setObjectName(u"actionYour_Account")
-        self.actionEdit_your_information = QAction(Main)
-        self.actionEdit_your_information.setObjectName(u"actionEdit_your_information")
+        self.actionLogout = QAction(Main)
+        self.actionLogout.setObjectName(u"actionLogout")
         self.actionWord_Count = QAction(Main)
         self.actionWord_Count.setObjectName(u"actionWord_Count")
         self.actionWord_Count.setCheckable(True)
@@ -433,7 +433,7 @@ class Ui_Main(object):
         self.menuAbout.addAction(self.actionAbout_Qt_lisence)
         self.menuAccount.addAction(self.actionYour_Account)
         self.menuAccount.addSeparator()
-        self.menuAccount.addAction(self.actionEdit_your_information)
+        self.menuAccount.addAction(self.actionLogout)
         self.toolBar.addAction(self.actionNew)
         self.toolBar.addAction(self.actionOpen)
         self.toolBar.addAction(self.actionSave)
@@ -457,7 +457,7 @@ class Ui_Main(object):
     # setupUi
 
     def retranslateUi(self, Main):
-        Main.setWindowTitle(QCoreApplication.translate("Main", u"MainWindow", None))
+        Main.setWindowTitle(QCoreApplication.translate("Main", u"Script Spinner", None))
         self.actionNew.setText(QCoreApplication.translate("Main", u"New", None))
         self.actionOpen.setText(QCoreApplication.translate("Main", u"Open...", None))
         self.actionSave.setText(QCoreApplication.translate("Main", u"Save", None))
@@ -481,7 +481,7 @@ class Ui_Main(object):
         self.actionTime.setText(QCoreApplication.translate("Main", u"Current Time", None))
         self.actionSide_Notes.setText(QCoreApplication.translate("Main", u"Side Notes", None))
         self.actionYour_Account.setText(QCoreApplication.translate("Main", u"Your Account", None))
-        self.actionEdit_your_information.setText(QCoreApplication.translate("Main", u"Logout", None))
+        self.actionLogout.setText(QCoreApplication.translate("Main", u"Logout", None))
         self.actionWord_Count.setText(QCoreApplication.translate("Main", u"Word Count", None))
         self.label.setText(QCoreApplication.translate("Main", u"Key Time Line", None))
 

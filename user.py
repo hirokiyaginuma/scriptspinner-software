@@ -1,4 +1,4 @@
-from os import path
+import os
 import pickle
 import mysql.connector
 from datetime import date, timedelta
@@ -14,7 +14,7 @@ class User(object):
         self.is_logged_in = is_logged_in
         self.session_expire_date = None
 
-        if path.isfile('user.dat'):
+        if os.path.isfile('user.dat'):
             with open('user.dat', 'rb') as f:
                 self.firstname, self.lastname, self.email, self.paid_until, self.is_logged_in, self.session_expire_date = pickle.load(f)
 
@@ -47,9 +47,9 @@ class User(object):
     def login(self, email, password, remember):
         mydb = mysql.connector.connect(
         host="45.63.10.63",
-        user="scriptspinner-tester",
-        password="TyQA6f%2xm]L7,mrLNJqL.#hvXL=4L",
-        database="scriptspinner-test",
+        user="scriptspinner",
+        password="W8=rnL9e4aqCL7tdanM(xLq_*#r7nG",
+        database="scriptspinner",
         port="3306"
         )
 
@@ -90,8 +90,7 @@ class User(object):
         # if email and password are not valid, raise UserNotFoundException
 
     def logout(self):
-        with open('user.dat', 'w'):
-            pass
+        os.remove("user.dat")
         # Delete the contents of user.dat
 
     def _remember(self, json=None):
