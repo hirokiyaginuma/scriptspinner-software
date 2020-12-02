@@ -111,6 +111,7 @@ GitHub.sublime-settings
 .vs
 .vscode
 .history
+build
 
 # Script Spinner extention #
 user.dat
