@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Script Spinner - Log in</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/texteditor.png</normaloff>img/texteditor.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">QWidget#Login{
 background-color: rgb(178, 190, 195);
