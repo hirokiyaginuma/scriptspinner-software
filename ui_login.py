@@ -18,6 +18,9 @@ class Ui_Login(object):
         if not Login.objectName():
             Login.setObjectName(u"Login")
         Login.resize(640, 486)
+        icon = QIcon()
+        icon.addFile(u"img/texteditor.png", QSize(), QIcon.Normal, QIcon.Off)
+        Login.setWindowIcon(icon)
         Login.setStyleSheet(u"QWidget#Login{\n"
 "background-color: rgb(178, 190, 195);\n"
 "}")
