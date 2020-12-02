@@ -21,10 +21,11 @@ class MainWindow(QMainWindow):
             self.ui.label_2.setText(str("Username: " + email))
 
 class Login(QWidget):
-    def __init__(self):
+    def __init__(self, user):
         QWidget.__init__(self)
         self.ui = Ui_Login()
         self.ui.setupUi(self)
+        self.user = user
 
         self.ui.login_btn.clicked.connect(self.login_click)
 
@@ -33,10 +34,10 @@ class Login(QWidget):
         password = self.ui.password_line.text()
         remember = self.ui.check_remember.isChecked()
 
-        authenticated = False
+        self.user.login(email, password, remember)
 
-        if authenticated:
-            self.main = Main()
+        if self.user.is_logged_in:
+            self.main = Main(self.user)
             self.main.show()
             self.close()
         else:
@@ -65,9 +66,16 @@ class Splash_Screen(QMainWindow):
 
         if splash_counter > 100:
             self.timer.stop()
-            self.login = Login()
-            self.login.show()
-            self.close()
+
+            user = User()
+            if user.is_logged_in:
+                self.main = Main(user)
+                self.main.show()
+                self.close()
+            else:
+                self.login = Login(user)
+                self.login.show()
+                self.close()
 
         splash_counter += 1
 
