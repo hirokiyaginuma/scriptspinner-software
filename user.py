@@ -48,7 +48,7 @@ class User(object):
         mydb = mysql.connector.connect(
         host="45.63.10.63",
         user="scriptspinner",
-        password="W8=rnL9e4aqCL7tdanM(xLq_*#r7nG",
+        password="",
         database="scriptspinner",
         port="3306"
         )
