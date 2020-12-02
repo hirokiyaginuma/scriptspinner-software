@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Script Spinner</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -878,16 +878,34 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionKey_Time_Line">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Key Time Line</string>
    </property>
   </action>
   <action name="actionTime">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Current Time</string>
    </property>
   </action>
   <action name="actionSide_Notes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Side Notes</string>
    </property>
@@ -903,6 +921,12 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionWord_Count">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Word Count</string>
    </property>

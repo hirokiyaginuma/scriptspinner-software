@@ -5,20 +5,26 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 from ui_main import Ui_Main
 
-class Main(QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__(self)
+class Main(QtWidgets.QMainWindow):
+    def __init__(self, parent=None):
+        QtWidgets.QMainWindow.__init__(self, parent)
         self.ui = Ui_Main()
         self.ui.setupUi(self)
 
         self.filename = ""
         self.is_change_saved = True
 
+        self.ui.actionNew.triggered.connect(self.new)
         self.ui.actionSave.triggered.connect(self.save)
         self.ui.actionKey_Time_Line.triggered.connect(self.toggle_left)
         self.ui.actionTime.triggered.connect(self.toggle_time)
         self.ui.actionWord_Count.triggered.connect(self.toggle_word_count)
         self.ui.actionSide_Notes.triggered.connect(self.toggle_side_notes)
+        self.ui.actionAbout_Qt_lisence.triggered.connect(self.aboutQt)
+
+    def new(self):
+        self.ui.textEdit_Script.clear()
+        self.ui.textEdit_Sidenotes.clear()
 
     def save(self):
         timelist = [str(self.ui.TimeList.item(i).text()) for i in range(self.ui.TimeList.count())]
@@ -33,7 +39,7 @@ class Main(QMainWindow):
         print()
         
         if not self.filename:
-            self.filename = QtWidgets.QFileDialog.getSaveFileName(self, 'Save File')[0]
+            self.filename = QtWidgets.QFileDialog.getSaveFileName(self, 'Save', None, "Script Spinner File (.ssp)")[0]
 
         print(self.filename)
 
@@ -82,3 +88,13 @@ class Main(QMainWindow):
             self.ui.sidenotes.show()
 
         self.toggle_right()
+
+    def aboutQt(self):
+        QApplication.instance().aboutQt()
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    win = Main()
+    win.show()
+    sys.exit(app.exec_())

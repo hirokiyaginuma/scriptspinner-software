@@ -32,11 +32,15 @@ class Login(QWidget):
         password = self.ui.password_line.text()
         remember = self.ui.check_remember.isChecked()
 
-        print(email, password, remember) # print to console
+        authenticated = False
 
-        self.main = Main()
-        self.main.show()
-        self.close()
+        if authenticated:
+            self.main = Main()
+            self.main.show()
+            self.close()
+        else:
+            QMessageBox.warning(self,"Login failed", 
+                "The email and password you entered did not match our records. Please double-check and try again.")
 
 class Splash_Screen(QMainWindow):
     def __init__(self):
@@ -68,7 +72,5 @@ class Splash_Screen(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    # win = Splash_Screen()
-    win = Main()
-    win.show()
+    win = Splash_Screen()
     sys.exit(app.exec_())

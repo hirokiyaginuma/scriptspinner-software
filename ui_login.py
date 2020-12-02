@@ -17,8 +17,10 @@ class Ui_Login(object):
     def setupUi(self, Login):
         if not Login.objectName():
             Login.setObjectName(u"Login")
-        Login.resize(640, 480)
-        Login.setStyleSheet(u"background-color: rgb(149, 165, 166);")
+        Login.resize(640, 486)
+        Login.setStyleSheet(u"QWidget#Login{\n"
+"background-color: rgb(178, 190, 195);\n"
+"}")
         self.verticalLayout = QVBoxLayout(Login)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.frame = QFrame(Login)
@@ -176,8 +178,14 @@ class Ui_Login(object):
         sizePolicy.setHeightForWidth(self.login_btn.sizePolicy().hasHeightForWidth())
         self.login_btn.setSizePolicy(sizePolicy)
         self.login_btn.setFont(font1)
-        self.login_btn.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"border-radius: 10px;")
+        self.login_btn.setStyleSheet(u"\\QPushButton {\n"
+"	border: none;\n"
+"	border-radius: 10px;	\n"
+"	background-color: rgb(255, 255, 255);\n"
+"}\n"
+"QPushButton:hover {	\n"
+"	background-color: rgba(255, 255, 255, 150);\n"
+"}")
         self.login_btn.setIconSize(QSize(16, 16))
         self.login_btn.setAutoDefault(False)
         self.login_btn.setFlat(False)

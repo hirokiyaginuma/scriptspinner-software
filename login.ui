@@ -7,14 +7,16 @@
     <x>0</x>
     <y>0</y>
     <width>640</width>
-    <height>480</height>
+    <height>486</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Script Spinner - Log in</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(149, 165, 166);</string>
+   <string notr="true">QWidget#Login{
+background-color: rgb(178, 190, 195);
+}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -289,8 +291,14 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 10px;</string>
+         <string notr="true">\QPushButton {
+	border: none;
+	border-radius: 10px;	
+	background-color: rgb(255, 255, 255);
+}
+QPushButton:hover {	
+	background-color: rgba(255, 255, 255, 150);
+}</string>
         </property>
         <property name="text">
          <string>Log in</string>

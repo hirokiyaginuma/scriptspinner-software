@@ -112,4 +112,5 @@ GitHub.sublime-settings
 .vscode
 .history
 
+# Script Spinner extention #
 *.ssp
