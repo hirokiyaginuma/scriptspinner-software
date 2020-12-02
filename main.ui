@@ -126,7 +126,7 @@ border: 1px solid;
           </property>
           <item>
            <property name="text">
-            <string>TimeLine1</string>
+            <string>Introduction</string>
            </property>
            <property name="flags">
             <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -134,7 +134,7 @@ border: 1px solid;
           </item>
           <item>
            <property name="text">
-            <string>TimeLine2</string>
+            <string>Body</string>
            </property>
            <property name="flags">
             <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -142,7 +142,7 @@ border: 1px solid;
           </item>
           <item>
            <property name="text">
-            <string>TimeLine3</string>
+            <string>Conclusion</string>
            </property>
            <property name="flags">
             <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
@@ -288,7 +288,7 @@ QPushButton:hover {
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# Text goes here&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -579,7 +579,7 @@ border: none;</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;# Text goes here&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
@@ -610,9 +610,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionSave"/>
     <addaction name="actionSave_as"/>
     <addaction name="separator"/>
-    <addaction name="actionPrint"/>
-    <addaction name="actionPrint_preview"/>
-    <addaction name="separator"/>
     <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
@@ -625,6 +622,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionCopy"/>
     <addaction name="actionCut"/>
     <addaction name="actionPaste"/>
+    <addaction name="separator"/>
+    <addaction name="actionSet_Time"/>
    </widget>
    <widget class="QMenu" name="menuFormat">
     <property name="title">
@@ -705,6 +704,8 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="actionFont"/>
    <addaction name="actionColor"/>
+   <addaction name="separator"/>
+   <addaction name="actionSet_Time"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -929,6 +930,15 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Word Count</string>
+   </property>
+  </action>
+  <action name="actionSet_Time">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/image/img/time.png</normaloff>:/image/img/time.png</iconset>
+   </property>
+   <property name="text">
+    <string>Set Time</string>
    </property>
   </action>
  </widget>
