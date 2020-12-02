@@ -7,6 +7,7 @@ from ui_splash_screen import Ui_Splash_Screen
 from ui_login import Ui_Login
 from ui_test_screen import Ui_MainWindow
 from main import Main
+from user import User
 
 splash_counter = 0
 
