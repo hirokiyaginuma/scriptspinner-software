@@ -134,6 +134,11 @@ class Ui_Main(object):
         self.actionWord_Count.setObjectName(u"actionWord_Count")
         self.actionWord_Count.setCheckable(True)
         self.actionWord_Count.setChecked(True)
+        self.actionSet_Time = QAction(Main)
+        self.actionSet_Time.setObjectName(u"actionSet_Time")
+        icon19 = QIcon()
+        icon19.addFile(u":/image/img/time.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.actionSet_Time.setIcon(icon19)
         self.centralwidget = QWidget(Main)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
@@ -410,9 +415,6 @@ class Ui_Main(object):
         self.menuFile.addAction(self.actionSave)
         self.menuFile.addAction(self.actionSave_as)
         self.menuFile.addSeparator()
-        self.menuFile.addAction(self.actionPrint)
-        self.menuFile.addAction(self.actionPrint_preview)
-        self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionExit)
         self.menuEdit.addAction(self.actionUndo)
         self.menuEdit.addAction(self.actionRedo)
@@ -420,6 +422,8 @@ class Ui_Main(object):
         self.menuEdit.addAction(self.actionCopy)
         self.menuEdit.addAction(self.actionCut)
         self.menuEdit.addAction(self.actionPaste)
+        self.menuEdit.addSeparator()
+        self.menuEdit.addAction(self.actionSet_Time)
         self.menuFormat.addAction(self.actionFont)
         self.menuFormat.addAction(self.actionColor)
         self.menuStyle.addAction(self.actionBold)
@@ -450,6 +454,8 @@ class Ui_Main(object):
         self.toolBar.addSeparator()
         self.toolBar.addAction(self.actionFont)
         self.toolBar.addAction(self.actionColor)
+        self.toolBar.addSeparator()
+        self.toolBar.addAction(self.actionSet_Time)
 
         self.retranslateUi(Main)
 
@@ -483,16 +489,17 @@ class Ui_Main(object):
         self.actionYour_Account.setText(QCoreApplication.translate("Main", u"Your Account", None))
         self.actionLogout.setText(QCoreApplication.translate("Main", u"Logout", None))
         self.actionWord_Count.setText(QCoreApplication.translate("Main", u"Word Count", None))
+        self.actionSet_Time.setText(QCoreApplication.translate("Main", u"Set Time", None))
         self.label.setText(QCoreApplication.translate("Main", u"Key Time Line", None))
 
         __sortingEnabled = self.TimeList.isSortingEnabled()
         self.TimeList.setSortingEnabled(False)
         ___qlistwidgetitem = self.TimeList.item(0)
-        ___qlistwidgetitem.setText(QCoreApplication.translate("Main", u"TimeLine1", None));
+        ___qlistwidgetitem.setText(QCoreApplication.translate("Main", u"Introduction", None));
         ___qlistwidgetitem1 = self.TimeList.item(1)
-        ___qlistwidgetitem1.setText(QCoreApplication.translate("Main", u"TimeLine2", None));
+        ___qlistwidgetitem1.setText(QCoreApplication.translate("Main", u"Body", None));
         ___qlistwidgetitem2 = self.TimeList.item(2)
-        ___qlistwidgetitem2.setText(QCoreApplication.translate("Main", u"TimeLine3", None));
+        ___qlistwidgetitem2.setText(QCoreApplication.translate("Main", u"Conclusion", None));
         self.TimeList.setSortingEnabled(__sortingEnabled)
 
 #if QT_CONFIG(tooltip)
@@ -507,7 +514,7 @@ class Ui_Main(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"># Text goes here</p></body></html>", None))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("Main", u"Current Time", None))
         self.current_time_label.setText(QCoreApplication.translate("Main", u"12:34", None))
         self.label_5.setText(QCoreApplication.translate("Main", u"Word Count", None))
@@ -517,7 +524,7 @@ class Ui_Main(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"># Text goes here</p></body></html>", None))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.menuFile.setTitle(QCoreApplication.translate("Main", u"File", None))
         self.menuEdit.setTitle(QCoreApplication.translate("Main", u"Edit", None))
         self.menuFormat.setTitle(QCoreApplication.translate("Main", u"Format", None))
