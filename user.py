@@ -17,7 +17,7 @@ class User(object):
         if os.path.isfile('user.dat'):
             with open('user.dat', 'rb') as f:
                 self.firstname, self.lastname, self.email, self.paid_until, self.is_logged_in, self.session_expire_date = pickle.load(f)
-                
+
             if self.session_expire_date <  date.today() + timedelta(days=30):
                 self.is_logged_in = False
 
@@ -44,7 +44,7 @@ class User(object):
         mydb = mysql.connector.connect(
         host="45.63.10.63",
         user="scriptspinner",
-        password="",
+        password="W8=rnL9e4aqCL7tdanM(xLq_*#r7nG",
         database="scriptspinner",
         port="3306"
         )
