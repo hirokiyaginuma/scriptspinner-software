@@ -17,6 +17,8 @@ class User(object):
         if os.path.isfile('user.dat'):
             with open('user.dat', 'rb') as f:
                 self.firstname, self.lastname, self.email, self.paid_until, self.is_logged_in, self.session_expire_date = pickle.load(f)
+            if self.session_expire_date <  date.today() + timedelta(days=30):
+                self.is_logged_in = False
 
         # print(self.firstname + " " + self.lastname + " " + self.email)
 
